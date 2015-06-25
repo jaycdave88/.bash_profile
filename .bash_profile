@@ -8,15 +8,32 @@ if [ "${BASH-no}" != "no" ]; then
         [ -r /etc/bashrc ] && . /etc/bashrc
 fi
 
-
-# Blue color on ls command
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
   
 # Custom commands
   alias server8="python -m SimpleHTTPServer 8000"
-  echo "server8 => Localhost:8000"
+  echo "server8" '|' "findme" '|' "move"
+
+  findme(){
+    echo "What do you like the path for?"
+    read -r CHOISE
+    find . -name $CHOISE
+  }
+
+  move(){
+    echo "What do you want to move"
+    read -r SOURCE
+    echo "Where would you like to move it?"
+    read -r DESTINATION
+    mv $SOURCE $DESTINATION
+  }
+
+  clean(){
+     ME="$USER"
+     killall -u $ME
+  }
 
 # Custom navigation:
   alias home="cd ~/Desktop"
@@ -29,4 +46,3 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
   alias push="git push"
   alias add="git add -A"
   alias commit="git commit -m"
-
