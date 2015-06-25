@@ -8,7 +8,11 @@ if [ "${BASH-no}" != "no" ]; then
         [ -r /etc/bashrc ] && . /etc/bashrc
 fi
 
-LS_COLORS=$LS_COLORS:'di=0;31:' ; export LS_COLORS
+
+# Blue color on ls command
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
   
 # Custom commands
   alias server8="python -m SimpleHTTPServer 8000"
@@ -24,4 +28,5 @@ LS_COLORS=$LS_COLORS:'di=0;31:' ; export LS_COLORS
   alias co="git checkout"
   alias push="git push"
   alias add="git add -A"
+  alias commit="git commit -m"
 
