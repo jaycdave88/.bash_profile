@@ -21,7 +21,7 @@ LS_COLORS=$LS_COLORS:'di=0;31:' ; export LS_COLORS
 
 # Custom GIT commands:
   alias st="git status"
-  alias co="checkout"
+  alias co="git checkout"
   alias push="git push"
   alias add="git add -A"
 
