@@ -14,7 +14,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
   
 # Custom commands
   alias server8="python -m SimpleHTTPServer 8000"
-  echo "server8" '|' "findme" '|' "move"
+  alias pc="RAILS_ENV=production bundle exec rake assets:precompile"
+  echo "server8" '|' "findme" '|' "move" '|' "pc"
 
   findme(){
     echo "What do you like the path for?"
